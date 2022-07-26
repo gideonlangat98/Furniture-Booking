@@ -1,15 +1,22 @@
 import React from 'react'
 
-function NavBar() {
+function NavBar({cart}) {
   return (
     <div>
         <div className='navbar--wrapper'>
           <div>MyFurnitureApp</div>
-          <div>
-          <div>AddToCart</div>
+          <div className='rightbar-wrapper'>
+            <div className='login'>
+            <button>Login</button>
+            </div>
+            <div>
+            <div>AddToCart</div>
+            </div>
           </div>
         </div>
+           
     </div>
+    
   )
 }
 

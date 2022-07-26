@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
+
 function FurnitureList() {
 
   const [furnitures, setFurnitures] = useState([]);
@@ -15,11 +16,12 @@ function FurnitureList() {
   const [cart, setCart] = useState([]);
 
 
-  const addToCart = (furnitures) => {
-    setCart([...cart, furnitures])
+  const addToCart = (furniture) => {
+    setCart([...cart, {...furniture}])
     console.log('We are in cart');
   }
-  
+
+
   const furnitureList = furnitures.map((furniture) => {
     return <div key={furniture.id} className="furnitures" furniture={furniture}>
       <div className='furniture-wrapper'>
@@ -32,10 +34,11 @@ function FurnitureList() {
      </div>
   })
 
+
   return (
     <div>
       <header>
-      <button>Cart {cart.length}</button>
+      <button cart={cart}>Cart {cart.length}</button>
       </header>
       {furnitureList}
     </div>

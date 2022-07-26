@@ -14,3 +14,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.rightbar-wrapper{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.login{
+    
+}
+
