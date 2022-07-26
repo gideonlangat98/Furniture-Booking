@@ -9,8 +9,8 @@
     padding: 0 1rem;
 }
 
-.furnitures{
-    display: flex;
+.furniture-wrapper{
+    display: grid;
     grid-template-columns: 1fr 1fr;
 }
 

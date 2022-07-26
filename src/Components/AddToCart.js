@@ -1,9 +1,17 @@
-import React from 'react'
+// import React, { useState } from 'react'
 
-function AddToCart() {
-  return (
-    <div>AddToCart</div>
-  )
-}
+// function AddToCart({furnitures}) {
+//   const [cart, setCart] = useState([])
 
-export default AddToCart
+//   const addToCart = () => {
+//     setCart([...cart, furnitures])
+//   }
+
+//   return (
+//     <div>
+//       <button>Add to Cart</button>
+//     </div>
+//   )
+// }
+
+// export default AddToCart;

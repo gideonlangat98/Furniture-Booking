@@ -11,21 +11,32 @@ function FurnitureList() {
       setFurnitures(data)
     })
   }, [])
-  
 
+  const [cart, setCart] = useState([]);
+
+
+  const addToCart = (furnitures) => {
+    setCart([...cart, furnitures])
+    console.log('We are in cart');
+  }
+  
   const furnitureList = furnitures.map((furniture) => {
-    return <div key={furniture.id} className="furnitures">
-      <div className='imgs'>
-      <img src={furniture.imageurl} alt={furniture.type}/>
-      </div>
+    return <div key={furniture.id} className="furnitures" furniture={furniture}>
+      <div className='furniture-wrapper'>
+      <img src={furniture.imageurl} alt={furnitures.type} style={{height:"200px"}}/>
      {furniture.price}
      {furniture.type}
      {furniture.location}
-  </div>
+      <button onClick={() => addToCart(furnitures)}>Add to Cart</button>
+     </div>
+     </div>
   })
 
   return (
     <div>
+      <header>
+      <button>Cart {cart.length}</button>
+      </header>
       {furnitureList}
     </div>
   )
