@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 function FurnitureList() {
 
   const [furnitures, setFurnitures] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3000/furnitures")
@@ -13,32 +14,30 @@ function FurnitureList() {
     })
   }, [])
 
-  const [cart, setCart] = useState([]);
-
-
   const addToCart = (furniture) => {
     setCart([...cart, {...furniture}])
     console.log('We are in cart');
   }
 
-
   const furnitureList = furnitures.map((furniture) => {
-    return <div key={furniture.id} className="furnitures" furniture={furniture}>
-      <div className='furniture-wrapper'>
-      <img src={furniture.imageurl} alt={furnitures.type} style={{height:"200px"}}/>
-     {furniture.price}
-     {furniture.type}
-     {furniture.location}
+    return (
+    <div key={furniture.id} className="furn">
+      <div className='image-wrapper'>
+      <img src={furniture.imageurl} alt={furniture.type} style={{height:"200px"}}/>
+     <p>{furniture.type}</p>
+     <p>{furniture.price}</p>
+     <p>{furniture.location}</p>
       <button onClick={() => addToCart(furnitures)}>Add to Cart</button>
+      </div>
      </div>
-     </div>
+    )
   })
 
 
   return (
     <div>
       <header>
-      <button cart={cart}>Cart {cart.length}</button>
+      <button>Cart {cart.length}</button>
       </header>
       {furnitureList}
     </div>
