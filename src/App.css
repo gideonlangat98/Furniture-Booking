@@ -1,3 +1,7 @@
+.App{
+    text-align: center;
+}
+
 .navbar--wrapper{
     font-size: 25px;
     height: 10vh;
@@ -7,17 +11,6 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-}
-
-.furn{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.rightbar-wrapper{
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .login{

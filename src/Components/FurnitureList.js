@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Furniture from "./Furniture"
 
 
 function FurnitureList() {
@@ -22,15 +23,7 @@ function FurnitureList() {
  
   const furnitureList = furnitures.map((furniture) => {
     return (
-    <div key={furniture.id} className="furn">
-      <div className='image-wrapper'>
-      <img src={furniture.imageurl} alt={furniture.type} style={{height:"200px"}}/>
-     <p>{furniture.type}</p>
-     <p>{furniture.price}</p>
-     <p>{furniture.location}</p>
-      <button onClick={() => addToCart(furnitures)}>Add to Cart</button>
-      </div>
-     </div>
+    <Furniture key={furniture.id} className="furn" furniture={furniture}/>
     )
   })
 
