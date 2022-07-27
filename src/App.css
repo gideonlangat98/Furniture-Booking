@@ -20,3 +20,17 @@
     border-radius: 5px;
 }
 
+.furn{
+    display: inline-block;
+    margin-right: 50px;
+}
+
+.image-wrapper{
+    margin-left: 50px;
+}
+
+.furn-details{
+    margin-left: 100px;
+    margin-bottom: 30px;
+}
+
