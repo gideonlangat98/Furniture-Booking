@@ -1,6 +1,6 @@
 import React from 'react'
 
-function NavBar({cart}) {
+function NavBar() {
   return (
     <div>
         <div className='navbar--wrapper'>

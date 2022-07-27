@@ -26,8 +26,8 @@ function FurnitureForm(){
         firstName: formData.firstName,
         lastName: formData.lastName
       })
-      .then (response => response.json())
-      .then(data => {
+      .then ((response) => response.json())
+      .then((data) => {
         onAddUser(data)
         setFormData({...formData, firstName: "", lastName: ""})
         console.log(data)

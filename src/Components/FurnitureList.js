@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 function FurnitureList() {
 
   const [furnitures, setFurnitures] = useState([]);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(furnitures);
 
   useEffect(() => {
     fetch("http://localhost:3000/furnitures")
@@ -16,9 +16,10 @@ function FurnitureList() {
 
   const addToCart = (furniture) => {
     setCart([...cart, {...furniture}])
-    console.log('We are in cart');
+    console.log('furnitures');
   }
 
+ 
   const furnitureList = furnitures.map((furniture) => {
     return (
     <div key={furniture.id} className="furn">
