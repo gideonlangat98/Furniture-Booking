@@ -4,7 +4,7 @@ function NavBar({setShow}) {
   return (
 
     <div>
-         <div className='navbar--wrapper' onClick={() => setShow(false)}>
+         <div className='navbar--wrapper' onClick={() => setShow(true)}>
           <div>MyFurnitureApp</div>
           </div>
           <div className='rightbar-wrapper'>
@@ -12,7 +12,7 @@ function NavBar({setShow}) {
             <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </span>
             <div>
-            <button className='login' onClick={() => setShow(true)}>View Products</button>
+            <button className='login' onClick={() => setShow(false)}>View Products</button>
             </div>
             <div>
             {/* <div>AddToCart</div> */}
