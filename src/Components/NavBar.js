@@ -1,18 +1,23 @@
 import React from 'react'
 
-function NavBar() {
+function NavBar({setShow}) {
   return (
+
     <div>
-         <div className='navbar--wrapper'>
+         <div className='navbar--wrapper' onClick={() => setShow(false)}>
           <div>MyFurnitureApp</div>
-          <div className='rightbar-wrapper'>
-            <div>
-            <button className='login'>Login</button>
-            </div>
-            <div>
-            <div>AddToCart</div>
-            </div>
           </div>
+          <div className='rightbar-wrapper'>
+            <span>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            </span>
+            <div>
+            <button className='login' onClick={() => setShow(true)}>View Products</button>
+            </div>
+            <div>
+            {/* <div>AddToCart</div> */}
+            </div>
+        
         </div> 
            
     </div>

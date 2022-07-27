@@ -19,4 +19,4 @@ function Furniture({furniture, handleClick}) {
   )
 }
 
-export default Furniture
+export default Furniture;
