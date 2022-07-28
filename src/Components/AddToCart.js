@@ -10,7 +10,7 @@ function AddToCart({cart, setCart, handleChange}) {
   };
 
   function handlePrice(){
-    let answ = 10000
+    let answ = price
     cart.map((furniture) => (answ += furniture.amount * furniture.price));
     setPrice(answ)
   }
@@ -29,7 +29,7 @@ function AddToCart({cart, setCart, handleChange}) {
         </div>
         <div>
           <button onClick={() => handleChange(furniture, 1)}>+</button>
-          <button>{furniture.amount}</button>
+          <button>{furniture.price}</button>
           <button onClick={() => handleChange(furniture, -1)}>-</button>
         </div>
         <div>

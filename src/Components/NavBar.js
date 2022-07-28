@@ -1,33 +1,29 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
 
+const navLinks = {
+  display: "inline",
+  padding: "30px",
+  textDecoration: "none",
+  fontSize: "25px",
+}
+
 function NavBar({setShow}) {
   return (
     <div className='nav'>
-      <NavLink to="/">
+      <NavLink to="/" style={navLinks}>
         Home
       </NavLink>
-      <NavLink to="/furniturelist">
-        Furnitures
+      <NavLink to="/furniturelist" style={navLinks}>
+        Products
       </NavLink>
-      <NavLink to="/addtocart">
-        AddToCart
-      </NavLink>
-      <NavLink to="/furnitureform">
+      <NavLink to="/furnitureform" style={navLinks}>
         Login
-      </NavLink>
-      <NavLink to="/login">
-        Sign up
-      </NavLink>
-      {/* <div className='navbar--wrapper' > */}
-        <button onClick={() => setShow(true)}>View Furniture</button>
-        {/* </div> */}
-        <div className='rightbar-wrapper'>
-          <span>
-            </span>
-            <div>
-              <button onClick={() => setShow(false)}>Cart</button>
-              </div>
+      </NavLink> 
+        <button onClick={() => setShow(true)} className="view-button">View Products</button>
+
+        <div className='rightbar-wrapper' onClick={() => setShow(false)}>
+              <button >Cart</button>
               <div>
             {/* <div>AddToCart</div> */}
             </div>

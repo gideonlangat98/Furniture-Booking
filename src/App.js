@@ -30,7 +30,7 @@ function App() {
 
   return (
     <div>
-      <NavBar setShow={setShow} size={cart.length} />
+      <NavBar setShow={setShow} />
       <Switch>
       <Route exact path="/">
       <HomePage />
