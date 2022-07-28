@@ -40,6 +40,7 @@
 
 .image-wrapper{
     margin-left: 50px;
+    margin-top: 2rem;
 }
 
 .furn-details{
@@ -49,7 +50,8 @@
 
 .footer{
     background-color: goldenrod;
-    margin-top: 13rem;
-    padding: 20px;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+    padding: 17px;
 }
 

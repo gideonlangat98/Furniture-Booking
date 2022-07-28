@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Furniture from "./Furniture"
+import FurnitureSearch from "./FurnitureSearch"
 
 
 function FurnitureList() {
 
   const [furnitures, setFurnitures] = useState([]);
+  const [searchFurniture, setSearch] = useState("")
 
   useEffect(() => {
     fetch("http://localhost:3000/furnitures")
@@ -13,6 +15,14 @@ function FurnitureList() {
       setFurnitures(data)
     })
   }, [])
+
+  const filterFurniture = furnitures.filter((filter) =>{ 
+    if(searchFurniture === ""){
+      return true;
+    }else{
+      return furniture.type.toLowerCase().includes(searchFurniture.toLowerCase())
+    }
+  });
 
  
   const furnitureList = furnitures.map((furniture) => {
@@ -27,6 +37,7 @@ function FurnitureList() {
       <header>
       {/* <button>Cart {cart.length}</button> */}
       </header>
+      <FurnitureSearch setSearch={set}/>
       {furnitureList}
     </div>
   )

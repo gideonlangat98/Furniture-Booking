@@ -14,7 +14,15 @@ function HomePage() {
     </div>
 
     <div className='footer'>
-      <h3>Footer</h3>
+      <div class="links">
+        <h4>Important Links</h4>
+      </div>
+      <div>
+        <li>Home</li>
+        <li>Products</li>
+        <li>About us</li>
+        <li>Contact us</li>
+      </div>
     </div>
     </div>
 

@@ -1,19 +1,14 @@
-// import React, { useState } from 'react'
+import React  from 'react'
 
-// function FurnitureSearch() {
-//   const [filter, setFilter] = useState('')
+function FurnitureSearch({setSearch}) {
+    function handleChange(e){
+        setSearch(e.target.value)
+    }
+  return (
+    <div>
+        <input placeholder="Search-Furn" onChange={handleChange}></input>
+    </div>
+  )
+}
 
-//   const searchFurn = (event) => {
-//     setFilter(event.target.value)
-//   }
-
-//   let furnSearch = furnitures.filter((furniture))
-//   return (
-//     <div>
-//       <h2>Search</h2>
-//       <input type="text" className='search' value={filter} onChange={searchFurn} />
-//     </div>
-//   )
-// }
-
-// export default FurnitureSearch
+export default FurnitureSearch;

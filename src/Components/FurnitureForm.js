@@ -17,7 +17,7 @@ function FurnitureForm(){
 
   function handleSubmit(e){
     e.preventDefault();
-    fetch("http://localhost:3000/users", {
+    fetch("http://localhost:3000/furnitures", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
