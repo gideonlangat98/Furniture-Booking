@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function AddToCart({furniture, setCart, handleChange}) {
+function AddToCart({cart, setCart, handleChange}) {
   const [price, setPrice] = useState(0);
 
   function handleRemove(id){
@@ -10,7 +10,7 @@ function AddToCart({furniture, setCart, handleChange}) {
   };
 
   function handlePrice(){
-    let answ = 
+    let answ = "10,000"
     cart.map((furniture) => (answ += furniture.amount * furniture.price));
     setPrice(answ)
   }
@@ -26,15 +26,6 @@ function AddToCart({furniture, setCart, handleChange}) {
         <div className="cart_img">
           <img src={furniture.imageurl} alt="" />
           <p>{furniture.type}</p>
-        </div>
-        <div>
-          <button onClick={() => handleChange(furniture, 1)}>+</button>
-          <button>{furniture.price}</button>
-          <button onClick={() => handleChange(furniture, -1)}>-</button>
-        </div>
-        <div>
-          <span>{furniture.price}</span>
-          <button onClick={() => handleRemove(furniture.id)}>Remove</button>
         </div>
       </div>
     ))}

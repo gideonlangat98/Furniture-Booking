@@ -14,7 +14,8 @@
 .icon span:nth-child(1) {
     font-size: 2rem;
     color: green;
-    margin-left: 50rem;
+    margin-left: 75rem;
+    top: -150;
 }
 
 .home-page{

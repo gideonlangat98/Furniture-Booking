@@ -14,8 +14,10 @@ function App() {
   const [show, setShow] = useState(true)
 
  function handleClick(furniture){
- if(cart.indexOf(furniture) !== -1)return;
+ if(cart.indexOf(furniture) !== -1){
   setCart([...cart, furniture])
+ }
+  
  }
 
  function handleChange(furniture, d){

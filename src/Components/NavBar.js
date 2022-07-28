@@ -14,7 +14,7 @@ function NavBar({setShow}) {
   return (
     <div className='nav'>
       <div>
-      <h3 style={{fontSize: "30px"}}>MyFurniture</h3>
+      <h3 style={{fontSize: "30px", marginLeft: "2rem"}}>MyFurniture</h3>
       <NavLink to="/" style={navLinks}>
         Home
       </NavLink>
