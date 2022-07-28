@@ -1,5 +1,6 @@
 import './App.css';
 import React, {useState} from "react";
+import { Route, Switch } from "react-router-dom"
 import NavBar from './Components/NavBar';
 import FurnitureList from './Components/FurnitureList';
 import Login from './Components/Login';
@@ -17,14 +18,43 @@ function App() {
   setCart([...cart, furniture])
  }
 
-  
+ function handleChange(furniture, d){
+  const ind = cart.indexOf(furniture)
+  const arr = cart;
+  arr[ind].amount += d
+
+  if (arr[ind].amount === 0) arr[ind].amount = 1;
+  setCart([...arr]);
+};
+
+
   return (
     <div>
-      <NavBar setShow={setShow}/>
+      <NavBar setShow={setShow} size={cart.length} />
+      <Switch>
+      <Route exact path="/">
       <HomePage />
-      {show ? <FurnitureList handleClick={handleClick} /> : <AddToCart cart={cart} />}
+      </Route>
+      <Route exact path="/furniturelist">
+      {show ? (
+        <FurnitureList handleClick={handleClick} />
+      ) : (
+        <AddToCart cart={cart} setCart={setCart} handleChange={handleChange}/>
+      )}
+      </Route>
+      <Route exact path="/furnitureform">
       <FurnitureForm />
+      </Route>
+      <Route exact path="login">
       <Login />
+      </Route>
+      
+      </Switch>
+     
+     
+      
+      
+      
     </div>
     
   );
