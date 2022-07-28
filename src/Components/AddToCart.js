@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-function AddToCart({cart, setCart, handleChange}) {
+function AddToCart({furniture, setCart, handleChange}) {
   const [price, setPrice] = useState(0);
 
   function handleRemove(id){
@@ -10,7 +10,7 @@ function AddToCart({cart, setCart, handleChange}) {
   };
 
   function handlePrice(){
-    let answ = price
+    let answ = 
     cart.map((furniture) => (answ += furniture.amount * furniture.price));
     setPrice(answ)
   }
