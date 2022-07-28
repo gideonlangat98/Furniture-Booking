@@ -43,6 +43,22 @@
     margin-top: 2rem;
 }
 
+.addCart{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.search-input{
+    margin-top: 15px;
+    margin-left: 20px;
+
+}
+
 .furn-details{
     margin-left: 100px;
     margin-bottom: 30px;

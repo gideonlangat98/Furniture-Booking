@@ -13,7 +13,7 @@ function Furniture({furniture, handleClick}) {
      <p>{type}</p>
      <p>{price}</p>
      <p>{location}</p>
-      <button onClick = { () => handleClick(furniture)}>Add to Cart</button>
+      <button onClick = { () => handleClick(furniture)} className="addCart">Add to Cart</button>
       </div>
     </div>
   )

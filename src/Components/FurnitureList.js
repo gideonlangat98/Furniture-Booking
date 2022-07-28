@@ -16,7 +16,7 @@ function FurnitureList() {
     })
   }, [])
 
-  const filterFurniture = furnitures.filter((filter) =>{ 
+  const furnitureFilter = furnitures.filter((furniture) =>{ 
     if(searchFurniture === ""){
       return true;
     }else{
@@ -25,7 +25,7 @@ function FurnitureList() {
   });
 
  
-  const furnitureList = furnitures.map((furniture) => {
+  const furnitureList = furnitureFilter.map((furniture) => {
     return (
     <Furniture key={furniture.id} className="furn" furniture={furniture} />
     )
@@ -37,7 +37,7 @@ function FurnitureList() {
       <header>
       {/* <button>Cart {cart.length}</button> */}
       </header>
-      <FurnitureSearch setSearch={set}/>
+      <FurnitureSearch setSearch={setSearch}/>
       {furnitureList}
     </div>
   )

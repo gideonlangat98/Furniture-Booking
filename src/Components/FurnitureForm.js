@@ -30,7 +30,6 @@ function FurnitureForm(){
       .then((data) => {
         onAddUser(data)
         setFormData({...formData, firstName: "", lastName: ""})
-        console.log(data)
       })
     })
   }

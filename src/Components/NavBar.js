@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from "react-router-dom"
+import shoppingIcon from "../images/shopping-cart"
 
 const navLinks = {
   display: "inline",
@@ -9,6 +10,7 @@ const navLinks = {
 }
 
 function NavBar({setShow}) {
+
   return (
     <div className='nav'>
       <NavLink to="/" style={navLinks}>
@@ -21,9 +23,8 @@ function NavBar({setShow}) {
         Login
       </NavLink> 
         <button onClick={() => setShow(true)} className="view-button">View Products</button>
-
         <div className='rightbar-wrapper' onClick={() => setShow(false)}>
-              <button >Cart</button>
+        <img src={shoppingIcon} alt="" style={{height:"30px"}}/>
               <div>
             {/* <div>AddToCart</div> */}
             </div>

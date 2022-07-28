@@ -5,8 +5,8 @@ function FurnitureSearch({setSearch}) {
         setSearch(e.target.value)
     }
   return (
-    <div>
-        <input placeholder="Search-Furn" onChange={handleChange}></input>
+    <div className='search-input'>
+        <input placeholder="Search Furniture" onChange={handleChange}></input>
     </div>
   )
 }

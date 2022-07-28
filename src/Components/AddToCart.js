@@ -22,7 +22,7 @@ function AddToCart({cart, setCart, handleChange}) {
   return (
     <article>
     {cart.map((furniture) => (
-      <div className="cart_box" key={furniture.id}>
+      <div key={furniture.id}>
         <div className="cart_img">
           <img src={furniture.imageurl} alt="" />
           <p>{furniture.type}</p>

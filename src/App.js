@@ -48,9 +48,7 @@ function App() {
       <Route exact path="login">
       <Login />
       </Route>
-      
       </Switch>
-      
     </div>
     
   );
