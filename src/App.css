@@ -11,6 +11,12 @@
     display: flex;
 }
 
+.furn1{
+    height: 400px;
+    margin-left: 10rem;
+    margin-top: 2rem;
+}
+
 .login{
     margin-right: 1rem;
     font-size: 20px;
@@ -39,5 +45,11 @@
 .furn-details{
     margin-left: 100px;
     margin-bottom: 30px;
+}
+
+.footer{
+    background-color: goldenrod;
+    margin-top: 13rem;
+    padding: 20px;
 }
 
