@@ -4,7 +4,17 @@
 
 .nav{
     background-color: goldenrod;
-    padding: 30px;
+    display: flex;
+}
+
+.icon{
+    cursor: pointer;
+}
+
+.icon span:nth-child(1) {
+    font-size: 2rem;
+    color: green;
+    margin-left: 50rem;
 }
 
 .home-page{
@@ -66,8 +76,23 @@
 
 .footer{
     background-color: goldenrod;
-    margin-top: 8rem;
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 12px;
+}
+
+.links{
+    display: inline-block;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 20px;
     margin-bottom: 2rem;
-    padding: 17px;
+}
+
+.links li{
+    padding-right: 20px;
+    margin-left: 10rem;
+    font-size: 25px;
 }
 
