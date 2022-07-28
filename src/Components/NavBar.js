@@ -5,31 +5,28 @@ function NavBar({setShow}) {
   return (
     <div className='nav'>
       <NavLink to="/">
-        HomePage
+        Home
       </NavLink>
       <NavLink to="/furniturelist">
-        FurnitureList
+        Furnitures
       </NavLink>
       <NavLink to="/addtocart">
         AddToCart
       </NavLink>
       <NavLink to="/furnitureform">
-        FurnitureForm
-      </NavLink>
-      <NavLink to="/login">
         Login
       </NavLink>
-
-
-      <div className='navbar--wrapper' onClick={() => setShow(true)}>
-        <div>MyFurnitureApp</div>
-        </div>
+      <NavLink to="/login">
+        Sign up
+      </NavLink>
+      {/* <div className='navbar--wrapper' > */}
+        <button onClick={() => setShow(true)}>View Furniture</button>
+        {/* </div> */}
         <div className='rightbar-wrapper'>
           <span>
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
             </span>
             <div>
-              <button onClick={() => setShow(false)}>View Products</button>
+              <button onClick={() => setShow(false)}>Cart</button>
               </div>
               <div>
             {/* <div>AddToCart</div> */}

@@ -2,8 +2,8 @@
     text-align: center;
 }
 
-.navbar--wrapper{
-    font-size: 25px;
+/* .navbar--wrapper{ */
+    /* font-size: 25px;
     height: 10vh;
     background: goldenrod;
     color: white;
@@ -11,7 +11,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
-}
+} */
 
 .login{
     margin-right: 1rem;
