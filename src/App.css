@@ -15,7 +15,8 @@
     font-size: 2rem;
     color: green;
     margin-left: 75rem;
-    top: -150;
+    position: relative;
+    bottom: -150;
 }
 
 .home-page{
