@@ -17,7 +17,7 @@ function FurnitureForm(){
 
   function handleSubmit(e){
     e.preventDefault();
-    fetch("http://localhost:3000/furnitures", {
+    fetch("https://gideon-server.herokuapp.com/furnitures", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

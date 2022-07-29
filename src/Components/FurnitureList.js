@@ -9,7 +9,7 @@ function FurnitureList() {
   const [searchFurniture, setSearch] = useState("")
 
   useEffect(() => {
-    fetch("http://localhost:3000/furnitures")
+    fetch("https://gideon-server.herokuapp.com/furnitures")
     .then((response) => response.json())
     .then((data) => {
       setFurnitures(data)
