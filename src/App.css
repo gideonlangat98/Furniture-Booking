@@ -12,11 +12,10 @@
 }
 
 .icon span:nth-child(1) {
-    font-size: 2rem;
+    font-size: 3rem;
     color: green;
     margin-left: 75rem;
     position: relative;
-    bottom: -150;
 }
 
 .home-page{

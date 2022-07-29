@@ -36,9 +36,10 @@ function FurnitureForm(){
   
   return (
     <form onSubmit={handleSubmit} className="form">
-      <input onChange={handleChange} value={formData.firstName} name="firstName" placeholder="firstName" />
-      <input onChange={handleChange} value={formData.lastName} name="lastName" placeholder="lastName" />
+      <input onChange={handleChange} value={formData.firstName} name="firstName" placeholder="firstName" required/>
+      <input onChange={handleChange} value={formData.lastName} name="lastName" placeholder="lastName" required/>
       <button>Submit</button>
+      <p>Don't have an account?  <button>Register here</button></p>
     </form>
   )
 }

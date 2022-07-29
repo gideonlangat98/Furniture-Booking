@@ -39,6 +39,20 @@ function FurnitureList() {
       </header>
       <FurnitureSearch setSearch={setSearch}/>
       {furnitureList}
+
+      <div className='footer'>
+      <h3 style={{fontSize:"23px"}}>Important Links</h3>
+      <div className='links'>
+        <li>Home </li>
+        <li>Products</li>
+        <li>Login</li>
+      </div>
+      <div className='footer-icons' style={{fontSize: "25px"}}>
+        <i class="fa-brands fa-instagram-square " style={{padding: "2rem", marginLeft: "10rem"}}></i>
+        <i class="fa-brands fa-facebook "  style={{paddingRight: "2rem"}}></i>
+        <i class="fa-brands fa-twitter-square " id="twitter "></i>
+      </div>
+      </div>
     </div>
   )
 }

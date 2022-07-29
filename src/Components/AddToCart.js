@@ -10,14 +10,14 @@ function AddToCart({cart, setCart, handleChange}) {
   };
 
   function handlePrice(){
-    let answ = "10,000"
+    let answ = 0;
     cart.map((furniture) => (answ += furniture.amount * furniture.price));
     setPrice(answ)
   }
 
-  useEffect(()=>{
-    handlePrice()
-  })
+  // useEffect(()=>{
+  //   handlePrice()
+  // })
 
   return (
     <article>
