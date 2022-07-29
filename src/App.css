@@ -29,6 +29,17 @@
     margin-top: 2rem;
 }
 
+.form{
+    margin-top: 30px;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.form > input{
+    display: grid;
+    margin-bottom: 20px;
+}
+
 .login{
     margin-right: 1rem;
     font-size: 20px;

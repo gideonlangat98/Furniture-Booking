@@ -35,7 +35,7 @@ function FurnitureForm(){
   }
   
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form">
       <input onChange={handleChange} value={formData.firstName} name="firstName" placeholder="firstName" />
       <input onChange={handleChange} value={formData.lastName} name="lastName" placeholder="lastName" />
       <button>Submit</button>
