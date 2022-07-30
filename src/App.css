@@ -57,11 +57,12 @@
 
 .furn{
     display: inline-block;
-    margin-right: 50px;
+    /* margin-right: 70px; */
+    
 }
 
 .image-wrapper{
-    margin-left: 50px;
+    margin-left: 70px;
     margin-top: 2rem;
 }
 
