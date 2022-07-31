@@ -29,7 +29,7 @@ Furniture-Booking is an app that allows users to go through our furniture collec
 Furniture-Booking Website is an app that allows users to go through our furniture collections and order for their favorite furniture at the convenience online.A customer orders/ or buy the furniture in our website by clicking the order button where by one will be directed to fill all the necessary details.
 
 ## Setup/Installation 
-* Clone the repo https://github.com/gideonlangat98/Furniture-Booking
+* Clone the repo
 * Fork and clone this repository to your local environment
 
 ## Requirements
