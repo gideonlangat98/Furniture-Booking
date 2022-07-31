@@ -6,7 +6,7 @@ function FurnitureSearch({setSearch}) {
     }
   return (
     <div className='search-input'>
-        <input placeholder="Search Furniture" onChange={handleChange}></input>
+        <input placeholder="Search for furniture" onChange={handleChange}></input>
     </div>
   )
 }

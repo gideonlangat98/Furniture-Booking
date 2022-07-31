@@ -24,21 +24,22 @@
 
 .home-page{
     display: flex;
+    background: rgb(213, 213, 243);
+    padding-bottom: 10rem;
 }
 
 .furn1{
-    height: 400px;
+    height: 420px;
     margin-left: 10rem;
     margin-top: 2rem;
 }
 
 .form{
     margin-top: 30px;
-    padding: 20px;
-    margin-left: 1rem;
-    margin-right: 50rem;
+    padding: 23px;
+    margin-left: 30rem;
+    margin-right: 28rem;
     border-style: solid;
-    background: rgb(194, 154, 231);
     border-radius: 5px;
 }
 
@@ -55,7 +56,6 @@
     border-radius: 5px;
 }
 
-
 .view-button{
     color: white;
     font-size: 15px;
@@ -67,8 +67,7 @@
 
 .furn{
     display: inline-block;
-    /* margin-right: 70px; */
-    
+    /* margin-right: 70px; */   
 }
 
 .image-wrapper{
@@ -90,7 +89,12 @@
 
 .search-input{
     margin-top: 15px;
-    margin-left: 20px;
+    margin-left: 55rem;
+}
+
+.search-input > input{
+    padding: 20px 60px 20px 30px;
+    border-radius: 5px;
 }
 
 .furn-details{
@@ -101,7 +105,7 @@
 .footer{
     /* background-color: goldenrod; */
     display: flex;
-    margin-top: 5rem;
+    margin-top: 0.2rem;
     margin-bottom: 1.5rem;
     padding: 12px;
     background: whitesmoke;
