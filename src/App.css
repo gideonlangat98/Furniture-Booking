@@ -3,18 +3,22 @@
 }
 
 .nav{
-    background-color: goldenrod;
+    /* background-color: goldenrod; */
     display: flex;
+    margin-top: 2rem;
+    border-bottom: solid;
+    border-bottom-color: green;
 }
+
 
 .icon{
     cursor: pointer;
 }
 
 .icon span:nth-child(1) {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     color: green;
-    margin-left: 75rem;
+    /* margin-left: 75rem; */
     position: relative;
 }
 
@@ -79,7 +83,6 @@
 .search-input{
     margin-top: 15px;
     margin-left: 20px;
-
 }
 
 .furn-details{

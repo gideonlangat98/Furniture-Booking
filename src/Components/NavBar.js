@@ -5,7 +5,7 @@ const navLinks = {
   display: "inline",
   padding: "30px",
   textDecoration: "none",
-  fontSize: "25px",
+  fontSize: "20px",
   marginLeft: "9rem"
 }
 
@@ -14,7 +14,9 @@ function NavBar({setShow}) {
   return (
     <div className='nav'>
       <div>
-      <h3 style={{fontSize: "30px", marginLeft: "2rem"}}>MyFurniture</h3>
+      <h3 style={{fontSize: "25px", marginLeft: "2rem"}}>MyFurniture</h3>
+      </div>
+      <div>
       <NavLink to="/" style={navLinks}>
         Home
       </NavLink>
