@@ -16,9 +16,9 @@
 }
 
 .icon span:nth-child(1) {
-    /* font-size: 3rem; */
+    font-size: 3rem;
     color: green;
-    /* margin-left: 75rem; */
+    margin-left: 63rem;
     position: relative;
 }
 
@@ -35,10 +35,15 @@
 .form{
     margin-top: 30px;
     padding: 20px;
-    margin-left: 20px;
+    margin-left: 1rem;
+    margin-right: 50rem;
+    border-style: solid;
+    background: rgb(194, 154, 231);
+    border-radius: 5px;
 }
 
 .form > input{
+    font-size: 20px;
     display: grid;
     margin-bottom: 20px;
 }
@@ -49,6 +54,7 @@
     padding: 5px;
     border-radius: 5px;
 }
+
 
 .view-button{
     color: white;
@@ -91,24 +97,32 @@
 }
 
 .footer{
-    background-color: goldenrod;
+    /* background-color: goldenrod; */
     display: flex;
-    margin-top: 3rem;
+    margin-top: 5rem;
     margin-bottom: 1.5rem;
     padding: 12px;
+    background: whitesmoke;
+    border-top: solid;
+    border-top-color: lightgreen;
+    border-bottom: solid;
+    border-bottom-color: green;
+}
+
+h4{
+    text-align: center;
 }
 
 .links{
     display: inline-block;
-    text-decoration: none;
-    list-style-type: none;
     margin-top: 20px;
     margin-bottom: 2rem;
 }
 
-.links li{
+.footer h5 li{
     padding-right: 20px;
     margin-left: 10rem;
     font-size: 25px;
+    
 }
 
