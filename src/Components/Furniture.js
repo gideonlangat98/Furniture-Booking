@@ -13,7 +13,7 @@ function Furniture({furniture, onAdd}) {
      <p>{furniture.type}</p>
      <p>{furniture.price}</p>
      <p>{furniture.location}</p>
-      <button onClick={() => onAdd(furniture)}>Add to Cart</button>
+      <button onClick={() => onAdd(furniture)} className="addCart">Add to Cart</button>
       </div>
     </div>
   )

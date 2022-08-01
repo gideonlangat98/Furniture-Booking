@@ -14,7 +14,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const onAdd = (furniture) =>{
-    const exist = cart.find(x => x.id === furniture.id)
+    const exist = cart.find((x) => x.id === furniture.id)
     if(exist){
       setCart(cart.map(x => x.id === furniture.id ? {...exist, qty: exist.qty + 1} : x))
     }else{
@@ -22,6 +22,16 @@ function App() {
     }
   }
 
+  const onRemove = (furniture) =>{
+    const exist = cart.find((x) => x.id === furniture.id)
+    if(exist.qty === 1){
+      setCart(cart.filter((x) => x.id !== furniture.id ? {...exist, qty: exist.qty - 1} : x))
+    }else{
+      setCart(
+        cart.map((x) => x.id === furniture.id ? {...exist, qty: exist.qty -1} : x)
+      )
+    }
+  }
 
   return (
     <div>
@@ -41,7 +51,7 @@ function App() {
       <FurnitureForm />
       </Route>
       <Route exact path="/addtocart">
-      <AddToCart onAdd={onAdd}cart={cart}/>
+      <AddToCart onAdd={onAdd} onRemove={onRemove} cart={cart}/>
       </Route>
       <Route exact path="login">
       <Login />

@@ -10,7 +10,7 @@ function AddToCart({cart, onAdd, onRemove}) {
           <div>{item.name}</div>
           <div>
             <button onClick={() => onAdd(item)}>+</button>
-            <button onClick={() => onRemove(item)}>+</button>
+            <button onClick={() => onRemove(item)}>-</button>
           </div>
           <div>
             {item.qty} * Ksh{item.price}
