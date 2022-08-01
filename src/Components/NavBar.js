@@ -26,14 +26,17 @@ function NavBar({setShow}) {
       <NavLink to="/furnitureform" style={navLinks}>
         Login
       </NavLink>
-      <button onClick={() => setShow(true)} className="view-button" style={{marginLeft: "4rem"}}>View Products</button>
+      <NavLink to="/addtocart" style={navLinks}>
+        Cart
+      </NavLink>
+      {/* <button onClick={() => setShow(true)} className="view-button" style={{marginLeft: "4rem"}}>View Products</button>
       <div className='rightbar-wrapper' onClick={() => setShow(false)}>
         <div className='icon'>
         <span>
           <i className="fas fa-cart-plus"></i>
         </span>
         </div>
-        </div> 
+        </div>  */}
         </div>
            
       

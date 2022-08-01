@@ -1,40 +1,24 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function AddToCart({cart, setCart, handleChange}) {
-  const [price, setPrice] = useState(0);
-
-  function handleRemove(id){
-    const arr = cart.filter((furniture) => furniture.id !== id);
-    setCart(arr);
-    handlePrice();
-  };
-
-  function handlePrice(){
-    let answ = 1;
-    cart.map((furniture) => (answ += furniture.amount * furniture.price));
-    setPrice(answ)
-  }
-
-  // useEffect(()=>{
-  //   handlePrice()
-  // })
-
+function AddToCart({cart, onAdd, onRemove}) {
   return (
-    <article>
-    {cart.map((furniture) => (
-      <div key={furniture.id}>
-        <div className="cart_img">
-          <img src={furniture.imageurl} alt="" />
-          <p>{furniture.type}</p>
+    <div>
+      <h2>Cart Items</h2>
+      <div>{cart.length === 0 && <div>Cart is Empty</div>}</div>
+      {cart.map((item) =>(
+        <div key={item.id}>
+          <div>{item.name}</div>
+          <div>
+            <button onClick={() => onAdd(item)}>+</button>
+            <button onClick={() => onRemove(item)}>+</button>
+          </div>
+          <div>
+            {item.qty} * Ksh{item.price}
+          </div>
         </div>
-      </div>
-    ))}
-    <div className="total">
-      <span>Total Price of your Cart</span>
-      <span>Rs - {price}</span>
+      ))}
     </div>
-  </article>
-);
-};
+  )
+}
 
-export default AddToCart
+export default AddToCart;

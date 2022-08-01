@@ -10,24 +10,17 @@ import AddToCart from './Components/AddToCart';
 
 
 function App() {
+  const [show, setShow] = useState(true);
   const [cart, setCart] = useState([]);
-  const [show, setShow] = useState(true)
 
- function handleClick(furniture){
- if(cart.indexOf(furniture) !== -1){
-  setCart([...cart, furniture])
- }
-  
- }
-
- function handleChange(furniture, d){
-  const ind = cart.indexOf(furniture)
-  const arr = cart;
-  arr[ind].amount += d
-
-  if (arr[ind].amount === 0) arr[ind].amount = 1;
-  setCart([...arr]);
-};
+  const onAdd = (furniture) =>{
+    const exist = cart.find(x => x.id === furniture.id)
+    if(exist){
+      setCart(cart.map(x => x.id === furniture.id ? {...exist, qty: exist.qty + 1} : x))
+    }else{
+      setCart([...cart, {...furniture, qty: 1}])
+    }
+  }
 
 
   return (
@@ -39,13 +32,16 @@ function App() {
       </Route>
       <Route exact path="/furniturelist">
       {show ? (
-        <FurnitureList handleClick={handleClick} />
+        <FurnitureList  onAdd={onAdd}/>
       ) : (
-        <AddToCart cart={cart} setCart={setCart} handleChange={handleChange}/>
+        'No products in cart'
       )}
       </Route>
       <Route exact path="/furnitureform">
       <FurnitureForm />
+      </Route>
+      <Route exact path="/addtocart">
+      <AddToCart onAdd={onAdd}cart={cart}/>
       </Route>
       <Route exact path="login">
       <Login />

@@ -87,6 +87,14 @@
     padding-top: 10px;
 }
 
+.addCart:hover{
+    background-color: rgb(97, 97, 189);
+}
+
+.addCart:active{
+    transform: scale(1.01,1.01);
+}
+
 .search-input{
     margin-top: 15px;
     margin-left: 55rem;

@@ -3,7 +3,7 @@ import Furniture from "./Furniture"
 import FurnitureSearch from "./FurnitureSearch"
 
 
-function FurnitureList() {
+function FurnitureList({onAdd}) {
 
   const [furnitures, setFurnitures] = useState([]);
   const [searchFurniture, setSearch] = useState("")
@@ -27,7 +27,7 @@ function FurnitureList() {
  
   const furnitureList = furnitureFilter.map((furniture) => {
     return (
-    <Furniture key={furniture.id} className="furn" furniture={furniture} />
+    <Furniture key={furniture.id} className="furn" furniture={furniture} onAdd={onAdd}/>
     )
   })
 
